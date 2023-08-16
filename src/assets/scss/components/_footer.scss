@@ -1,0 +1,109 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    &-main{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 100px;
+        &__catalog{
+            width: 460px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h3{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 130%;
+                color: #192040;
+            }
+            ul{
+                display: flex;
+                gap: 20px;
+                li{
+                    display: flex;
+                    width: 220px;
+                    flex-direction: column;
+                    gap: 10px;
+                    a{
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: #828299;
+                    }
+                }
+            }
+        }
+        &__service{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h3{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 130%;
+                color: #192040;
+            }
+            ul{
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              li{
+                width: 300px;
+                a{
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #828299;
+                }
+              }  
+            }
+        }
+        &__about{
+            width: 140px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                li{
+                    a{
+                        color: #192040;
+                        font-size: 18px;
+                        line-height: 130%;
+                        font-weight: 600;
+
+                    }
+                }
+            }
+        }
+        &__links{
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+            gap: 30px;
+            &--phone,&--mail{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                h5{
+                    font-size: 12px;
+                    line-height: 140%;
+                    color: #828299;
+                }
+                p,a{
+                    font-size: 22px;
+                    line-height: 130%;
+                    font-weight: 600;
+                    color: #192040;
+                }
+            }
+            &--nets{
+                display: flex;
+                gap: 10px;
+                font-size: 24px;
+                line-height: 24px;
+                color: #192040;
+                cursor: pointer;
+            }
+        }
+    }
+}

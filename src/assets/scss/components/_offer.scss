@@ -1,0 +1,121 @@
+.offer{
+    display: flex;
+    width: 100%;
+    padding: 60px 50px;
+    &-main{
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        height: 467px;
+        border: 2px solid  #FFFFFF;
+        background: radial-gradient(75.98% 72.30% at 71.36% 78.16%, rgba(211, 229, 207, 0.30) 0%, rgba(211, 229, 207, 0.00) 100%), radial-gradient(92.44% 103.17% at 0.00% 100.00%, rgba(207, 213, 229, 0.30) 0%, rgba(207, 213, 229, 0.00) 100%), radial-gradient(65.23% 84.12% at -0.00% 0.00%, rgba(255, 181, 61, 0.10) 0%, rgba(255, 181, 61, 0.00) 100%), #FFFEFC;
+        border-radius: 40px;
+        justify-content: space-between;
+        &__info{
+            margin: 60px 0 60px 120px;  
+            display: flex;
+            flex-direction: column;
+            width: 710px;
+            &--title{
+                width: 513px;
+                gap: 20px;
+                padding-bottom: 50px;
+                h2{
+                    font-size: 40px;
+                    line-height: 130%;
+                    color: #192040;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #828299;
+                }
+            }
+            &--inputs{
+                width: 100%;
+                height: 89px;
+                display: flex;
+                padding-bottom: 20px;
+                gap: 10px;
+                &___name,&___phone{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h5{
+                        font-size: 12px;
+                        line-height: 140%;
+                        color: #828299;
+                    }
+                    input{
+                        width: 350px;
+                        border: 2px solid  #EDEDF2;
+                        background:#FFFEFC;
+                        border-radius: 10px;
+                        height: 62px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 140%;
+                        justify-content: start;
+                        padding: 20px 25px;
+                    }
+                }
+            }
+            &--btn{
+                display: flex;
+                gap: 30px;
+                padding-top: 30px;
+                width: 566px;
+                &___send{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #FF2E51;
+                    border-radius: 50px;
+                    border: none;
+                    span{
+                        padding: 20px 50px;
+                        color: #FFFFFF;
+                        height: 62px;
+                        width: 236px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 140%;
+                    }
+                }
+                &___send:hover{
+                    background: #FA052E;
+                    box-shadow: 0px 15px 20px -15px #FF0D35;
+                }
+                p{
+                    font-size: 14px;
+                    color: #828299;
+                    line-height: 140%;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+        &__img{
+            width: 590px;
+            position: relative;
+            &--1{
+                display: flex;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                border-radius: 0% 7% 27% 72% / 0% 10% 46% 100% ;
+            }
+            &--2{
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 0 0  40px 0;
+            }
+        }
+    }
+}

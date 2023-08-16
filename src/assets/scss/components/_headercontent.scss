@@ -1,0 +1,78 @@
+.headercontent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 245px ;
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        gap: 130px;
+        &__title{
+            width: 470px;
+            font-size: 40px;
+            color: #192040;
+            font-weight: 600;
+        }
+        &__text{
+            width: 830px;
+            font-size: 16px;
+            color: #192040;
+            p{
+                padding-bottom: 30px;
+            }
+            &--btn{
+                width: 156px;
+                height: 22px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                span{
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-decoration: underline;
+                    margin-right: 10px;
+                    color: #192040;
+                }
+            }
+        }
+    }
+    &-cards{
+        display: flex;
+        gap: 10px;
+        padding-top: 120px;
+        &__card{
+            display: grid;
+            grid-template-columns: repeat(4, fr1);
+            width: 350px;
+            min-height: 433px;
+            border-radius: 30px;
+            padding: 50px 40px;
+            border: 2px solid #ffffff;
+            background: radial-gradient(57.81% 66.99% at 22.29% 100.00%, rgba(207, 213, 229, 0.15) 0%, rgba(207, 213, 229, 0.00) 100%), radial-gradient(115.61% 95.13% at 0.00% 0%, rgba(255, 220, 141, 0.08) 0%, rgba(255, 220, 141, 0.00) 100%), #FFFEFC;
+            img{
+                width: 128px;
+                height: 128px;
+                border-radius: 50%;
+            }
+            h4{
+                font-size: 18px;
+                font-weight: 600;
+                color: #192040;
+            }
+            p{
+                font-size: 16px;
+                color: #828299;
+            }
+        }
+    }
+}
+.btnchervon::before{
+ content: '';
+ transition: all 0.3s;
+ transform: rotate(0);
+}
+.btnchervon::after{
+    content: '';
+    transform: rotate(90deg);
+}

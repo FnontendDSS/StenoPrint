@@ -1,0 +1,69 @@
+.ourservices{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    width: 100%;
+    &-title{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__routers{
+            display: flex;
+            gap: 10px;
+            &--home,&--service,&--item{
+                font-size: 14px;
+                line-height: 140%;
+                color: #828299;
+            }
+            &--home{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        h1{
+            font-size: 50px;
+            line-height: 130%;
+            font-weight: 600;
+            color: #192040;
+        }
+        &__item{
+            font-size: 16px;
+            width: 830px;
+            line-height: 140%;
+            color: #828299;
+            padding-bottom: 120px;
+        }
+    }
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        &__card1,&__card2,&__card3,&__card4{
+            display: flex;
+            gap: 130px;
+            &--text{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h3{
+                    font-size: 40px;
+                    line-height: 130%;
+                    color: #192040;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #192040;
+                }
+                a{
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #FF2E51;
+                    gap: 5px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

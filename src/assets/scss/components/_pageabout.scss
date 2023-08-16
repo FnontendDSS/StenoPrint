@@ -1,0 +1,204 @@
+.pageabout{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 60px 50px;
+    &-title{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        padding-bottom: 60px;
+        &__routers{
+            display: flex;
+            gap: 10px;
+            &--home,&--about,&--item{
+                font-size: 14px;
+                line-height: 140%;
+                color: #828299;
+            }
+        }
+        h1{
+            font-size: 50px;
+            line-height: 130%;
+            font-weight: 600;
+            color: #192040;
+        }
+        p{
+            font-size: 16px;
+            max-width: 830px;
+            line-height: 140%;
+            color: #828299;
+        }
+    }
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        &__info{
+            display: flex;
+            width: 100%;
+            gap: 130px;
+            &--img{
+                width: 100%;
+                height: 100%;
+                img{
+                    border-radius: 61% 40% 18% 81% / 56% 46% 50% 44% ;
+                    object-fit: cover;
+                    
+                }
+            }
+            &--text{
+                display: flex;
+                flex-direction: column;
+                padding: 40px 0;
+                gap: 20px;
+                h3{
+                    font-size: 40px;
+                    line-height: 130%;
+                    font-weight: 600;
+                    color: #192040;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #192040;
+                }
+            }
+        }
+        &__cards{
+            display: flex;
+            gap: 10px;
+        }
+        &__sections{
+            display: flex;
+            flex-direction: column;
+            gap: 120px;
+            padding: 120px 0;
+            &--card1,&--card2{
+                display: flex;
+                gap: 130px;
+                &___info{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    h4{
+                        font-size: 40px;
+                        line-height: 130%;
+                        font-weight: 600;
+                        color: #192040;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: #192040;
+                    }
+                }
+            }
+            &--card1{
+                &___img{
+                    display: flex;
+                    height: 400px;
+                    width: 710px;
+                    position: relative;
+                    &---btn{
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        border-radius: 30px;
+                        padding: 2px;
+                        backdrop-filter: blur(2px);
+                        button{
+                            display: flex;
+                            align-items: center;
+                            padding: 20px 25px;
+                            background: #FF2E51;
+                            border-radius: 50px;
+                            gap: 15px;
+                            border: none;
+                            color: #ffffff;
+                            font-size: 24px;
+                            line-height: 24px;
+                            cursor: pointer;
+                            span{
+                                display: none;
+                                font-size: 16px;
+                                line-height: 140%;
+                                text-decoration: underline;
+                            }
+                        }
+                        button:hover #span{
+                            display: flex;
+                        }
+                    }
+
+                }
+            }
+        }
+        &__actives{
+            display: flex;
+            flex-direction: column;
+            &--title{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h3{
+                    font-size: 40px;
+                    line-height: 130%;
+                    font-weight: 600;
+                    color: #192040;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: #192040;
+                    width: 590px;
+                    padding-bottom: 50px;
+                }
+            }
+            &--card{
+                display: flex;
+                // flex-direction: column;
+                gap: 30px;
+                &___img{
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+            &--btn{
+                display: flex;
+                justify-content: space-between;
+                padding: 30px 0;
+                gap: 10px;
+                &___arrows{
+                    width: 60px;
+                    display: flex;
+                    gap: 10px;
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: #828299;
+                    cursor: pointer;
+                }
+                &___arrows:hover{
+                    color: #192040;
+                }
+                meter{
+                    width: 70%;
+                }
+                &___progress{
+                    width: 70%;
+                    margin: 13px 0;
+                    height: 2px;
+                    color: #828299;
+                    border: 2px solid #828299;
+                }
+    
+            }
+        }
+
+    }
+}

@@ -1,0 +1,23 @@
+:root{
+    --g: 'Gilroy';
+  }
+  $g: var(--g);
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: $g;
+    font-weight: 400;
+    // @include container();
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;  
+  }
+  .container{
+    // border: 1px solid red;
+}
+body{
+  background: linear-gradient(126deg, rgba(244,101,101,0.46551120448179273) 0%, rgba(255, 220, 141, 0.1) 10%, rgba(211, 229, 207, 0.4) 40%, rgba(229,207,228,1) 48%, rgba(244, 101, 101, 0.1) 57%);
+}

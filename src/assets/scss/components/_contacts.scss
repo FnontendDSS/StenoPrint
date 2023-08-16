@@ -1,0 +1,104 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 60px 50px;
+    &-main{
+        display: flex;
+        width: 100%;
+        gap: 132px;
+        &__l{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 590px;
+            &--adress{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h3{
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #828299;
+                }
+                p{
+                    font-size: 28px;
+                    line-height: 130%;
+                    font-weight: 600;
+                    color: #192040;
+                }
+            }
+            &--contact{
+                display: flex;
+                gap: 30px;
+                &___l{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 280px;
+                    h3{
+                        font-size: 14px;
+                        line-height: 140%;
+                        color: #828299;
+                    }
+                    p{
+                        font-size: 22px;
+                        line-height: 130%;
+                        font-weight: 600;
+                        color: #192040;
+                    }
+                }
+                &___r{
+                    width: 280px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h3{
+                        font-size: 14px;
+                        line-height: 140%;
+                        color: #828299;
+                    }
+                    a{
+                        font-size: 22px;
+                        line-height: 130%;
+                        font-weight: 600;
+                        color: #192040;
+                    }
+                }
+            }
+            &--links{
+                display: flex;
+                ul{
+                    display: flex;
+                    gap: 10px;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 52px;
+                        height: 52px;
+                        cursor: pointer;
+                        border-radius: 50px;
+                        border: 1px solid var(--sep, #EDEDF2);
+                        a{
+                            font-size: 24px;
+                            line-height: 24px;
+                            font-weight: 600;
+                            color: #192040;
+                        }
+                    }
+                }
+            }
+            &--work{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h3,p{
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: #828299;
+                }
+            }
+        }
+    }
+}

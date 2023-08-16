@@ -1,0 +1,221 @@
+.popular{
+    width: 100%;
+    min-height: 710px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    position: relative;
+    &-title{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        h2{
+            font-size: 40px;
+            font-weight: 600;
+            color: #192040;
+        }
+        &__btns{
+            display: flex;
+            gap: 10px;
+            padding-bottom: 30px;
+            &--1{
+                display: flex;
+                padding: 15px 30px;
+                background: #FF2E51;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #ffffff;
+                }
+            }
+            &--2{
+                display: flex;
+                padding: 15px 30px;
+                background: #FFFEFC;
+                border-radius: 50px;
+                border: 2px solid #EDEDF2;
+                cursor: pointer;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #828299;
+                }
+            }
+            &--3{
+                display: flex;
+                padding: 15px 30px;
+                background: #FFFEFC;
+                border-radius: 50px;
+                border: 2px solid #EDEDF2;
+                cursor: pointer;
+                span{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #828299;
+                }
+            }
+        }
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        gap: 10px;
+        overflow: hidden;
+
+        &__item1{
+            width: 350px;
+            height: 437px;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+            background:#FAF8F5;
+            border-radius: 30px;
+            border: 2px solid var#fff;
+            &--img{
+                width: 100%;
+                display: flex;
+                position: relative;
+                &___info{
+                    display: flex;
+                    position: absolute;
+                    padding: 15px;
+                    gap: 10px;
+                    &---sale,&---pop,&---new,&---have{
+                        padding: 8px 15px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #ffffff;
+                        border-radius: 50px;
+                    }
+                    &---sale{
+                        background: linear-gradient(175deg, #FFCFE0 0%, #E96796 23.86%, #EF3C3C 100%);
+                    }
+                    &---pop{
+                        background: linear-gradient(175deg, #FFE9FE 0%, #E39EE0 23.86%, #B669B3 100%);
+                    }
+                    &---new{
+                        background: linear-gradient(175deg, #F2FFEF 0%, #93C688 23.86%, #56824C 100%);
+                    }
+                    &---have{
+                        background: linear-gradient(175deg, #C2CCFF 0%, #465EDB 23.86%, #3147BA 100%);
+                    }
+                }
+            }
+            &--info{
+                display: flex;
+                flex-direction: column;
+                padding: 20px 30px;
+                &___name{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h3{
+                        font-size: 16px;
+                        color: #192040;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: #192040;
+                        font-weight: 600;
+                    }
+                }
+                &___articul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h4{
+                        font-size: 14px;
+                        color: #828299;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #828299;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+   
+    &-btns{
+        display: flex;
+        padding-top: 500px;
+        gap: 50px;
+        &__slide{
+            display: flex;
+            gap: 10px;
+            &--prev,&--next{
+                padding: 12px;
+                cursor: pointer;
+                background: transparent;
+                border: none;
+                font-size: 24px;
+                line-height: 24px;
+                color: #828299;
+            }
+        }
+        &__line{
+            width: 1020px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 22px;
+            height: 2px;
+            border: 2px solid;
+            border-color: #828299;
+        }
+        &__more{
+            font-size: 16px;
+            font-weight: 700;
+            color: #192040;
+            padding: 12px 0;
+            text-decoration: underline;
+        }
+    }
+    
+}
+.cards-hover1__btn{
+    display: flex;
+    width: 350px;
+    position: absolute;
+    cursor: pointer;
+    top: 467px;
+    padding: 60px 20px 30px 20px;
+    gap: 10px;
+    border-radius: 0 0 30px 30px;
+    background: #FAF8F5;
+    transform: translateY(-30px);
+    &--more{
+        width: 140px;
+        height: 52px;
+        cursor: pointer;
+        padding: 15px 10px;
+        border-radius: 50px;
+        border: none;
+        background: #FF2E51;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+    &--buy{
+        width: 140px;
+        height: 52px;
+        padding: 15px 10px;
+        border: none;
+        background: transparent;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: underline;
+        color: #192040;
+    }
+}
+.cards-hover1:hover #buy1{
+    transform: translateY(163px);
+    transition: all 0.3s;
+}
+
