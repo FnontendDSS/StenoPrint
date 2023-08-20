@@ -123,6 +123,7 @@ export default {
           width  : 1430,
           gap    : '1rem',
       },
+      
     }
   },
   components: {

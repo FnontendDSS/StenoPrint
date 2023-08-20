@@ -239,3 +239,19 @@ z-index: -1;
 
 .opencatalog-enter-active,
 .opencatalog-leave-active { transition: all 0.5s ease-in-out }
+.splide__arrow--next,
+.splide__arrow--prev{
+    background: transparent;
+}
+  .splide__arrow--next:hover{
+      background: #FF2E51;
+  }
+  .splide__arrow--prev:hover{
+      background: #FF2E51;
+  }
+  .splide__arrow svg{
+      fill: #D2D2D9;
+  }
+  .splide__pagination__page:hover{
+ background: #FF2E51;
+  }
