@@ -92,6 +92,7 @@
                     display: flex;
                     justify-content: space-between;
                     padding: 20px 30px;
+                    cursor: pointer;
                     &---text{
                         display: flex;
                         overflow: hidden;
@@ -339,26 +340,31 @@
 }
 #anima{
     background: var(--gradient, linear-gradient(135deg, #FF2E51 0%, #FFDC8D 100%));
-    animation: normal anima 4s infinite;
+    animation: normal anima 3s infinite;
     width: 472px;
     height: 142px;
     z-index: 1;
     position: absolute;
     border-radius: 30px;
-
+}
+#splideCatalog .splide__pagination{
+    bottom: -30px;
 }
 @keyframes anima {
-    25%{
+    0%{
         transform: translateY(-5px) translateX(2px);
     }
-    50%{
+    25%{
         transform:  translateX(5px) translateY(2px);
     }
-    75%{
+    50%{
         transform: translateY(5px) translateX(-2px);
     }
-    100%{
+    75%{
         transform:   translateX(-5px) translateY(-2px);
+    }
+    100%{
+        transform: translateY(-5px) translateX(2px);
     }
    
 }

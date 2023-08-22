@@ -3,13 +3,15 @@
     <div class="popular-title">
         <h2>Популярные товары</h2>
         <div class="popular-title__btns">
+            <router-link to="/catalogmore">
         <button class="popular-title__btns--1">
             <span>Дизайнерские обои</span>
-        </button>
-        <button class="popular-title__btns--2">
+        </button>     
+            </router-link>
+        <button class="popular-title__btns--1">
             <span>Виниловые обои</span>
         </button>
-        <button class="popular-title__btns--3">
+        <button class="popular-title__btns--1">
             <span>Фирменные обои</span>
         </button>
         </div>

@@ -17,6 +17,8 @@
         <h1>Дизайнерские обои</h1>
     </div>
         <div class="catalogpage-category">
+            <div id="anima">
+                </div>
                 <div class="catalogpage-category__cards">
                     <div class="catalogpage-category__cards--img">
                         <img src="../assets/images/ava1.png" alt="" class="catalogpage-category__cards--img___1">
@@ -32,10 +34,13 @@
     <div class="catalogpage-main">
         <div class="catalogpage-main__filtr">
             <div class="catalogpage-main__filtr--item">
-                <div class="catalogpage-main__filtr--item___title">
+                <div class="catalogpage-main__filtr--item___title" @click="openOrCloseFiltr">
                     <h4>Коллекции:</h4> <p class="catalogpage-main__filtr--item___title---text">Акварель, Модерн, Цветы
 </p>
-                    <span @click="openOrCloseFiltr"><fa :icon="['fas', 'chevron-down']" /></span>
+                    <span >
+                        <fa v-if="filtrarrow" :icon="['fas', 'chevron-down']" />
+                        <fa v-else :icon="['fas', 'chevron-up']" />
+                        </span>
                 </div>
                 <transition>
                 <div class="catalogpage-main__filtr--item___main" v-if="filtrItem">
@@ -63,9 +68,12 @@
                 </transition>
             </div>
             <div class="catalogpage-main__filtr--item">
-                <div class="catalogpage-main__filtr--item___title">
+                <div class="catalogpage-main__filtr--item___title"   @click="openOrCloseFiltr3">
                     <h4>Цвет</h4>
-                    <span @click="openOrCloseFiltr3"><fa :icon="['fas', 'chevron-down']" /></span>
+                    <span>
+                        <fa v-if="filtrarrow3" :icon="['fas', 'chevron-down']" />
+                        <fa v-else :icon="['fas', 'chevron-up']" />
+                        </span>
                 </div>
                 <transition>
                <div class="catalogpage-main__filtr--item___main" v-if="filtrItem3">
@@ -117,9 +125,12 @@
                 </transition>
             </div>
             <div class="catalogpage-main__filtr--item">
-                <div class="catalogpage-main__filtr--item___title">
+                <div class="catalogpage-main__filtr--item___title"  @click="openOrCloseFiltr4">
                     <h4>Материал</h4>
-                    <span @click="openOrCloseFiltr4"><fa :icon="['fas', 'chevron-down']" /></span>
+                    <span>
+                        <fa v-if="filtrarrow4" :icon="['fas', 'chevron-down']" />
+                        <fa v-else :icon="['fas', 'chevron-up']" />
+                        </span>
                 </div>
                 <transition>
                <div class="catalogpage-main__filtr--item___main" v-if="filtrItem4">
@@ -179,9 +190,10 @@
                 </button>
             </div>
         </div>
-        <div class="catalogpage-main__cards">
+        <Splide :options="options" id="splideCatalog">
+                <SplideSlide>
             <div class="catalogpage-main__cards--category">
-                <router-link to="catalogcard">
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop1.png" alt="">
@@ -203,6 +215,7 @@
                     </div>
                 </div>
                 </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop2.png" alt="">
@@ -222,6 +235,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop3.png" alt="">
@@ -241,6 +256,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop4.png" alt="">
@@ -260,6 +277,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop1.png" alt="">
@@ -280,6 +299,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop2.png" alt="">
@@ -299,6 +320,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop3.png" alt="">
@@ -318,6 +341,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop4.png" alt="">
@@ -337,6 +362,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop1.png" alt="">
@@ -357,6 +384,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop2.png" alt="">
@@ -376,6 +405,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop3.png" alt="">
@@ -395,6 +426,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop4.png" alt="">
@@ -414,6 +447,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop4.png" alt="">
@@ -433,6 +468,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop1.png" alt="">
@@ -453,6 +490,8 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
+                <router-link to="/catalogcard">
                 <div class="catalogpage-main__cards--category___item">
                     <div class="catalogpage-main__cards--category___item---img">
                         <img src="../assets/images/pop2.png" alt="">
@@ -472,11 +511,656 @@
                         </div>
                     </div>
                 </div>
+                </router-link>
             </div>
-            <div class="catalogpage-main__cards--swiper">
-
+                </SplideSlide>
+                <SplideSlide>
+            <div class="catalogpage-main__cards--category">
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop3.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----have">В наличии</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop3.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----have">В наличии</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop3.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----have">В наличии</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
             </div>
-        </div>
+                </SplideSlide>
+                <SplideSlide>
+            <div class="catalogpage-main__cards--category">
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop3.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----have">В наличии</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop3.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----have">В наличии</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop3.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----have">В наличии</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop4.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop1.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----sale">-25%</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+                <router-link to="/catalogcard">
+                <div class="catalogpage-main__cards--category___item">
+                    <div class="catalogpage-main__cards--category___item---img">
+                        <img src="../assets/images/pop2.png" alt="">
+                        <div class="catalogpage-main__cards--category___item---img____btns">
+                            <div class="catalogpage-main__cards--category___item---img____btns----pop">Популярное</div>
+                            <div class="catalogpage-main__cards--category___item---img____btns----new">Новинка</div>
+                        </div>
+                    </div>
+                    <div class="catalogpage-main__cards--category___item--info">
+                        <div class="catalogpage-main__cards--category___item--info___name">
+                            <h4>Floraison</h4>
+                            <p>от 2 552 ₽ / м2</p>
+                        </div>
+                        <div class="catalogpage-main__cards--category___item--info___price">
+                            <h5>Артикул: 11039</h5>
+                            <p>от 3 452 ₽ / м2</p>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+            </div>
+                </SplideSlide>
+            </Splide>
     </div>
   </div>
   <Footer/>
@@ -488,8 +1172,10 @@
 
 <script>
 import Footer from '@/components/Footer.vue'
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 export default {
-  components: { Footer },
+  components: { Footer,Splide, SplideSlide  },
     data() {
         return {
             instuctionItem: false,
@@ -497,20 +1183,34 @@ export default {
             filtrItem2: false,
             filtrItem3: false,
             filtrItem4: false,
+            filtrarrow: true,
+            filtrarrow2: true,
+            filtrarrow3: true,
+            filtrarrow4: true,
+            options:{
+           rewind: true,
+           width: 1070,
+           gap: '1rem',
+           arrows: false,
+         },
         }
     },
     methods: {
         openOrCloseFiltr(){
             this.filtrItem = !this.filtrItem
+              this.filtrarrow = !this.filtrarrow
         },
         openOrCloseFiltr2(){
             this.filtrItem2 = !this.filtrItem2
+            this.filtrarrow2 = !this.filtrarrow2
         },
         openOrCloseFiltr3(){
             this.filtrItem3 = !this.filtrItem3
+            this.filtrarrow3 = !this.filtrarrow3
         },
         openOrCloseFiltr4(){
             this.filtrItem4 = !this.filtrItem4
+            this.filtrarrow4 = !this.filtrarrow4
         },
         openOrCloseInsrtuction(){
             this.instuctionItem = !this.instuctionItem
