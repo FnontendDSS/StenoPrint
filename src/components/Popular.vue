@@ -132,16 +132,6 @@
         </div>
     </div>
     <div class="popular-btns">
-        <div class="popular-btns__slide">
-        <button class="popular-btns__slide--prev">
-            <fa :icon="['fas', 'chevron-left']" />
-        </button>
-        <button class="popular-btns__slide--next">
-            <fa :icon="['fas', 'chevron-right']" />
-        </button>
-
-        </div>
-        <div class="popular-btns__line"></div>
         <router-link to="/catalog">
         <a href="#!" class="popular-btns__more">Смотреть все товары</a>
         </router-link>

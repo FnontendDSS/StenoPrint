@@ -131,6 +131,8 @@
    
     &-btns{
         display: flex;
+        width: 100%;
+        justify-content: end;
         padding-top: 500px;
         gap: 50px;
         &__slide{

@@ -37,6 +37,7 @@
                     background: #FF2E51;
                     border-radius: 50px;
                     margin: 20px 40px;
+                    color: var(--white, #FFF);
                 }
             }
             &--info{
@@ -99,7 +100,9 @@
             border-color: #828299;
         }
         &__more{
-            padding: 12px 0;
+            width: 100%;
+            display: flex;
+            justify-content: end;
             a{
                 font-weight: 700;
                 font-size: 16px;
